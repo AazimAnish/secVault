@@ -1,0 +1,49 @@
+.Settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .Settings h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Settings form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .Settings label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .Settings input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .Settings button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .Settings button:hover {
+    background-color: #0069d9;
+  }
+  
