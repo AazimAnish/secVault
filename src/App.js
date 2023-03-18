@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Web3 from "web3";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./components/Sidebar/Sidebar";
 import HomePage from "./components/HomePage/HomePage";
@@ -44,15 +44,15 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Sidebar account={account} handleConnect={handleConnect} />
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/upload" component={Upload} />
-          <Route path="/inbox" component={Inbox} />
-          <Route path="/settings" component={Settings} />
-        </Switch>
-      </Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/inbox" element={<Inbox />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
