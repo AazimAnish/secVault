@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { deleteFile } from "../handleDelete/deleteFile";
+import FileShare from "../share/Share";
+import "./HomePage.css";
+import web3 from "web3";
+import FileSharing from "../../contracts/FileSharing.json";
+import SecureVault from "../../contracts/SecureVault.json";
 
 function HomePage() {
   const [files, setFiles] = useState([]);
+  const [recipient, setRecipient] = useState("");
+
+  const [shareFileHash, setShareFileHash] = useState(null);
+  const [shareModalOpen, setShareModalOpen] = useState(false);
 
   useEffect(() => {
     const uploadedFiles = JSON.parse(localStorage.getItem("uploadedFiles"));
@@ -11,6 +20,17 @@ function HomePage() {
       setFiles(uploadedFiles);
     }
   }, []);
+
+  const handleShare = async (hash) => {
+    const accounts = await web3.eth.getAccounts();
+    const recipientAddress = recipient;
+
+    const result = await shareFileHash.methods.getFile(hash).call();
+    const uploaderAddress = result[0];
+    const ipfsHash = result[1];
+
+    // Add code here to retrieve the file from IPFS and send it to the recipient address
+  };
 
   const handleDelete = (hash) => {
     const newFiles = files.filter((file) => file.hash !== hash);
@@ -36,7 +56,15 @@ function HomePage() {
           />
           <div>{file.name}</div>
         </a>
-        <button onClick={() => handleDelete(file.hash)}>Delete</button>
+        <div>
+          <input
+            type="text"
+            placeholder="Recipient address"
+            onChange={(e) => setRecipient(e.target.value)}
+          />
+          <button onClick={() => handleShare(file.hash)}>Share</button>
+          <button onClick={() => handleDelete(file.hash)}>Delete</button>
+        </div>
       </div>
     ));
   };
@@ -46,6 +74,15 @@ function HomePage() {
       <h2>Secure Vault</h2>
       <div className="HomePage-files">{renderFiles()}</div>
       <Link to="/upload">Upload a file</Link>
+
+      {shareModalOpen && (
+        <div className="share-modal">
+          <FileShare
+            hash={shareFileHash}
+            onClose={() => setShareModalOpen(false)}
+          />
+        </div>
+      )}
     </div>
   );
 }
