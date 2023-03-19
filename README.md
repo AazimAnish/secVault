@@ -53,12 +53,15 @@ Tech Stack
 -   IPFS (Decentralized storage and sharding)
 -   Metamask (Authentication)
 
-## Team Members
--   Aazim Anish 
--   Aakash PR
+## License
 
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 API Used
 --------
 
 -   MetaMask API
+
+## Team Members
+-   Aazim Anish 
+-   Aakash PR
