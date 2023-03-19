@@ -63,5 +63,5 @@ API Used
 -   MetaMask API
 
 ## Team Members
--   Aazim Anish 
--   Aakash PR
+-   [Aazim Anish](https://github.com/AazimAnish) 
+-   [Aakash P R](https://github.com/aakash414)
