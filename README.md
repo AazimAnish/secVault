@@ -22,20 +22,27 @@ Demo Video
 You can add a demo video of the project here.
 
 ## Installation
-- Clone the Repository
+* Add [Metamask Extension](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
+* Clone the Repository
 ```
 $ git clone https://github.com/aakash414/securevault.git
 ```
-- Install Dependencies
- In root directory, 
+* Install Dependencies
+* Run the Terminal, In root directory:
  ```
  npm install
+ npm start
  ```
 ------------
 
--   Aazim Anish 
--   Aakash PR
+## Roadmap
 
+- [x] Add Metamask Authentication
+- [x] Implement Uploading 
+- [ ] Using IPFS for decentralized storage
+- [ ] Implement private and secure File Sharing feature
+- [ ] Time limited File Sharing
+  
 
 Tech Stack
 ----------
@@ -45,6 +52,11 @@ Tech Stack
 -   Solidity (Smart Contracts)
 -   IPFS (Decentralized storage and sharding)
 -   Metamask (Authentication)
+
+## Team Members
+-   Aazim Anish 
+-   Aakash PR
+
 
 API Used
 --------
