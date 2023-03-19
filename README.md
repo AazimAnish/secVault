@@ -1,7 +1,7 @@
-Secure Vault
+SecVault
 ============
 
-Secure Vault is a project for securely storing and managing sensitive PII (Personal Identifiable Information) data of citizens. The project implements robust security measures such as encryption and two-factor authentication, and provides a convenient way for citizens to securely access their PII data and collaborate with authorized third-party organizations.
+SecVault is a project for securely storing and managing sensitive PII (Personal Identifiable Information) data of citizens. The project implements robust security measures such as encryption and two-factor authentication, and provides a convenient way for citizens to securely access their PII data and collaborate with authorized third-party organizations.
 
 Features
 --------
