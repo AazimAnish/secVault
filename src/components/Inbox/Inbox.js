@@ -20,6 +20,8 @@ function Inbox() {
           from: accounts[0],
         });
 
+        console.log("numFiles:", numFiles); // add console.log statement
+
         for (let i = 0; i < numFiles; i++) {
           const file = await fileSharing.methods.getReceivedFile(i).call({
             from: accounts[0],
