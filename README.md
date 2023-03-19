@@ -14,12 +14,12 @@ Features
 Screenshots
 -----------
 
-You can add screenshots of the project's UI here.
+![my screenshot](./public/assests/SecVault.png)
 
 Demo Video
 ----------
 
-You can add a demo video of the project here.
+https://www.loom.com/share/4a5086a01fc74f9db59064106f72b14f
 
 ## Installation
 * Add [Metamask Extension](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
