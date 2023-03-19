@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Web3 from "web3";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./App.css";
+import LandingPage from "./components/LandingPage/LandingPage";
 import Sidebar from "./components/Sidebar/Sidebar";
 import HomePage from "./components/HomePage/HomePage";
 import Upload from "./components/Upload/Upload";
@@ -40,6 +41,10 @@ function App() {
       method: "eth_requestAccounts",
     });
     setAccount(accounts[0]);
+  }
+
+  if (!account) {
+    return <LandingPage handleConnect={handleConnect} />;
   }
 
   return (
