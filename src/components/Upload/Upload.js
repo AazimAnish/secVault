@@ -7,8 +7,6 @@ function Upload() {
     <div className="Upload">
       <h2>Upload</h2>
       <FileUpload />
-      <FileUpload />
-      <FileUpload />
     </div>
   );
 }

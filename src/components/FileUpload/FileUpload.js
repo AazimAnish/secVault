@@ -1,39 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { create } from "ipfs-core";
-
-let ipfs;
-
-async function getIpfsInstance() {
-  if (!ipfs) {
-    ipfs = await create();
-  }
-  return ipfs;
-}
 
 function FileUpload() {
   const [file, setFile] = useState(null);
   const [hash, setHash] = useState(null);
 
-  const onFileChange = (event) => {
+  const onFileChange = async (event) => {
     setFile(event.target.files[0]);
   };
 
   const uploadFile = async () => {
     if (file) {
-      const ipfs = await getIpfsInstance();
+      const ipfs = await create();
       const { cid } = await ipfs.add(file);
+      const uploadedFile = { name: file.name, hash: cid.toString() };
       setHash(cid.toString());
+      const uploadedFiles = JSON.parse(localStorage.getItem("uploadedFiles"));
+      localStorage.setItem(
+        "uploadedFiles",
+        JSON.stringify([...(uploadedFiles || []), uploadedFile])
+      );
+      setFile(null); // Add this line to reset the file state after the upload
+      await ipfs.stop();
     }
   };
-
-  useEffect(() => {
-    return () => {
-      // Release the IPFS lock when the component is unmounted
-      if (ipfs && ipfs.repo) {
-        ipfs.repo.gc();
-      }
-    };
-  }, []);
 
   return (
     <div>
