@@ -40,7 +40,7 @@ $ git clone https://github.com/aakash414/securevault.git
 - [x] Add Metamask Authentication
 - [x] Implement Uploading 
 - [x] Using IPFS for decentralized storage
-- [ ] Implement private and secure File Sharing feature 
+- [x] Implement private and secure File Sharing feature(Bug fixing)
 - [ ] Time limited File Sharing
   
 
