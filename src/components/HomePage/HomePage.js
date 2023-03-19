@@ -5,7 +5,7 @@ import FileShare from "../share/Share";
 import "./HomePage.css";
 import web3 from "web3";
 import FileSharing from "../../contracts/FileSharing.json";
-import SecureVault from "../../contracts/SecureVault.json";
+//import SecureVault from "../../contracts/SecureVault.json";
 
 function HomePage() {
   const [files, setFiles] = useState([]);
