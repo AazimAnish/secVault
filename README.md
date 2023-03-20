@@ -1,15 +1,15 @@
 SecVault
 ============
 
-SecVault is a project for securely storing and managing sensitive PII (Personal Identifiable Information) data of citizens. The project implements robust security measures such as encryption and two-factor authentication, and provides a convenient way for citizens to securely access their PII data and collaborate with authorized third-party organizations.
+SecVault is a project for securely storing and sharing sensitive PII (Personal Identifiable Information) data of citizens. The project implements robust security measures such as encryption and two-factor authentication, and provides a convenient way for citizens to securely access their PII data and share with authorized third-party organizations.
 
 Features
 --------
 
 -   Securely store and manage sensitive PII data
 -   Implement robust security measures such as encryption and two-factor authentication
--   Provide a convenient way for citizens to securely access their PII data
--   Collaborate with authorized third-party organizations in a secure environment
+-   Provide a convenient way for citizens to securely share their PII data
+-   option to share access of files with a time limit with authorized third-party organizations in a secure environment
 
 Screenshots
 -----------
